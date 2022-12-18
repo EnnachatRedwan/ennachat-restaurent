@@ -1,0 +1,700 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+::selection {
+    color: white;
+    background: red;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*header part*/
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100px;
+    transition: .7s;
+}
+.txtlog{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.stiky{
+    height: 70px;
+    background-color: white;
+    box-shadow: 0 0 40px black;
+}
+.stiky .txtlog{
+    left: 0;
+    top: 0;
+    margin: 35px 80px;
+}
+.stiky .txtlog .r{
+    font-size: 1.6em;
+    color: red;
+}
+.stiky .txtlog .t{
+    font-size: 1em;
+    color: black;
+}
+
+/*Logo part*/
+
+.txtlog{
+    transition: .7s;
+    position: fixed;
+    color: rgb(238, 238, 238);
+    display: flex;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Satisfy', cursive;
+}
+.txtlog .r{
+    transition: .7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    line-height: 100%;
+    font-size: 15vw;
+    color: red;
+}
+.txtlog .t{
+    transition: .7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10vw;
+    line-height: 100%;
+    animation: moving 5s infinite;
+}
+
+/*burger menu part*/
+
+.menu{
+    display: none;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-btn .menu-btn_burger{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    transition: all .5s ease-in-out;
+    border-radius: 5px;
+}
+.menu-btn .menu-btn_burger::before,
+.menu-btn .menu-btn_burger::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    transition: all .5s ease-in-out;
+    border-radius: 30px;
+}
+.menu-btn .menu-btn_burger::before{
+    transform: translateY(-10px);
+}
+.menu-btn .menu-btn_burger::after{
+    transform: translateY(10px);
+}
+.menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn_burger::before{
+    transform: rotate(-45deg) translate(35px,35px);
+}
+.menu-btn.open .menu-btn_burger::after{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+.nv{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.788);
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    left: -80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: .5s;
+}
+.menu-btn.open~ .nv{
+    left: 0;
+}
+.nv a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+}
+
+/*basckUp part*/
+
+header .backUp{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: .5s ease;
+    pointer-events: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+header .backUp .fas{
+    font-size: 30px;
+    color: red;
+}
+.stiky .backUp{
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+}
+
+/*slider part*/
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.slide{
+    width: 100%;
+    object-fit: cover;
+    transition: 2s;
+}
+.radio{
+    display: none;
+}
+.nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 1vw;
+    transition: background 2s;
+}
+
+
+#radio1:checked~ .img1{
+    margin-left: 0;
+}
+#radio2:checked~ .img1{
+    margin-left: -100%;
+}
+#radio3:checked~ .img1{
+    margin-left: -200%;
+}
+#radio4:checked~ .img1{
+    margin-left: -300%;
+}
+
+/*all sections part*/
+
+.sec{
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+}
+.shadow{
+    box-shadow: 0 0 200px black;
+    position: relative;
+    z-index: 5;
+}
+
+/*s1 section*/
+
+.s1{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+}
+.s1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: back 5s infinite;
+}
+@keyframes back{
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+/*s2 section*/
+
+
+.s2{
+    display: flex;
+}
+.s2 article .s2cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.s2 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+.s2 article .s2cont h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    color: black;
+}
+.s2 article .s2cont h1 span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.s2 article .s2cont p span:first-child{
+    color: red;
+    text-align: left;
+}
+.s2 article .s2cont p span{
+    color: black;
+}
+.s2 .s2cont p{
+    font-family: 'Righteous', cursive;
+    margin: 10px;
+    font-size: 2.5vh;
+    text-align: center;
+    color: rgb(63, 63, 63);
+}
+.s2 .s2cont a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    margin-top: 6vh;
+    padding: 5px 30px;
+    background-color: red;
+    border-radius: 30px;
+    transition: .5s;
+}
+.s2 .s2cont a:hover{
+    letter-spacing: 3px;
+}
+
+/*s3 section*/
+
+.s3{
+    display: flex;
+}
+.s3 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    z-index: 6;
+}
+.s3 article .s3cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.s3 #pics{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.s3 article img{
+    position: relative;
+    width: 20vw;
+    height: 70vh;
+    object-fit: cover;
+    box-shadow: 0 0 50px black;
+}
+.s3 article .s3cont h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.s3 article .s3cont h1 span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.s3 .s3cont a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    padding: 5px 30px;
+    background-color: red;
+    border-radius: 30px;
+    transition: .5s;
+}
+.s3 .s3cont a:hover{
+    letter-spacing: 3px;
+}
+.s3 .s3cont p{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 2.5vh;
+    color: rgb(207, 207, 207);
+}
+
+/*s4 section*/
+
+.s4{
+    display: flex;
+}
+.s4 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+.s4 article img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.s4 article .s4cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.s4 article .s4cont h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    color: black;
+}
+.s4 article .s4cont h1 span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.s4 article .s4cont p span:first-child{
+    color: red;
+    text-align: left;
+}
+.s4 article .s4cont p span{
+    color: black;
+}
+.s4 .s4cont p{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    margin: 10px;
+    font-size: 2.5vh;
+    color: rgb(63, 63, 63);
+}
+.s4 .s4cont a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    margin-top: 6vh;
+    padding: 5px 30px;
+    background-color: red;
+    border-radius: 30px;
+    transition: .5s;
+}
+.s4 .s4cont a:hover{
+    letter-spacing: 3px;
+}
+
+/*s5 section*/
+
+.s5{
+    display: flex;
+}
+.s5 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    z-index: 6;
+}
+.s5 article .s5cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.s5 #pics{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.s5 article img{
+    position: relative;
+    width: 20vw;
+    height: 70vh;
+    object-fit: cover;
+    box-shadow: 0 0 50px black;
+}
+.s5 article .s5cont h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    color: white;
+}
+.s5 article .s5cont h1 span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.s5 .s5cont a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    padding: 5px 30px;
+    background-color: red;
+    border-radius: 30px;
+    transition: .5s;
+}
+.s5 .s5cont a:hover{
+    letter-spacing: 3px;
+}
+.s5 .s5cont p{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 2.5vh;
+    color: rgb(207, 207, 207);
+}
+
+/*s6 section*/
+
+.s6{
+    display: flex;
+}
+.s6 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+.s6 article img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.s6 article:first-child{
+    background-color: red;
+}
+.s6 article .s6cont h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.s6 article .s6cont .txtcont{
+    position: relative;
+    width: 90%;
+    height: 50px;
+    overflow: hidden;
+}
+.s6 article .s6cont .txtcont input{
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+.s6 article .s6cont .txtcont label{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.459);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+}
+.s6 article .s6cont .txtcont label::after{
+    content: '';
+    position: absolute;
+    left: 0%;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid white;
+    transition: transform .3s ease;
+    transform: translateX(-100%);
+}
+.s6 article .s6cont .txtcont .lbcont{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all .3s ease;
+}
+.s6 article .s6cont .txtcont input:focus + .lb1 .lbcont,
+.s6 article .s6cont .txtcont input:valid + .lb1 .lbcont{
+    transform: translateY(-150%);
+    color: white;
+    font-size: 14px;
+}
+.s6 article .s6cont .txtcont input:focus + label::after,
+.s6 article .s6cont .txtcont input:valid + label::after{
+    transform: translateX(0%);
+}
+.s6 article .s6cont .txtarea{
+    width: 90%;
+    height: 40vh;
+    padding: 15px;
+    resize: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.459);
+}
+.s6 article .s6cont .txtarea::placeholder{
+    color: rgba(255, 255, 255, 0.459);
+}
+.s6 article .s6cont .txtarea:focus{
+    border: 2px solid white;
+}
+.s6 .s6cont a{
+    text-decoration: none;
+    color: red;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    margin-top: 6vh;
+    padding: 5px 30px;
+    background-color: white;
+    border-radius: 30px;
+    transition: .5s;
+}
+.s6 .s6cont a:hover{
+    letter-spacing: 3px;
+}
+.s6 article .s6cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+/*s7 section*/
+
+.s7{
+    background-color: black;
+    display: flex;
+}
+.s7 article{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+.s7 article:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.s7 article div{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+ .s7 article #map{
+     width: 100%;
+     height: 100%;
+ }   
+.s7 article  h1{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    color: white;
+}
+.s7 article h1 span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.s7 article p{
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    color: rgb(180, 180, 180);
+}
+.s7 article p span{
+    color: red;
+}
+.s7 article .fab{
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+.s7 article .fab:hover{
+    text-shadow: 0 0 10px red;
+    transform: translateY(-10px);
+}
+
+
+ /*media*/
+
+ @media(max-width:800px){
+    .sec{
+        flex-direction: column;
+        height: 200vh;
+    }
+    .sec article{
+        width: 100%;
+    }
+    .simg article img{
+        width: 45%;
+    }
+    .secphone{
+        height: 100vh;
+    }
+    .secphone .phone{
+        display: none;
+    }
+ }

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="Images/Header.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.min.js"></script>
+    <title>Redwan Restaurant</title>
+    <script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="txtlog">
+            <span class="r">
+                <h1>R</h1>
+            </span>
+            <span class="t">
+                <h2 id="t1">edwan</h2>
+                <h2 id="t2">estaurant</h2>
+            </span>
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn_burger">
+
+            </div>
+        </div>
+        <nav class="nv">
+            <a href="#Main" onclick="cls()">Main</a>
+            <a href="#Food" onclick="cls()">Food</a>
+            <a href="#Delivery" onclick="cls()">Delivery</a>
+            <a href="#Drinks" onclick="cls()">Drinks</a>
+            <a href="#Restaurant" onclick="cls()">Restaurant</a>
+            <a href="#Comments" onclick="cls()">Comments</a>
+            <a href="#About" onclick="cls()">About</a>
+        </nav>
+        <a href="#Main" class="backUp"><i class="fas fa-angle-double-up"></i></a>
+    </header>
+
+    
+    <section class="s1" id="Main">
+        <img src="Images/Main.jpg" alt="">
+    </section>
+    <section class="sec s2 shadow" id="Food">
+        <article>
+            <div class="s2cont">
+                <h1>Food<span>.</span></h1>
+                <p><span>Enjoy our Pizza</span><span>:</span> Cheese Pizza, Veggie Pizza,
+                     Pepperoni Pizza, Meat Pizza, Margherita Pizza, BBQ Chicken Pizza
+                    , Hawaiian Pizza, Buffalo Pizza, Supreme Pizza, The Works Pizza.
+                </p>
+                <p><span>Enjoy our Pasta</span><span>:</span> Gnocchi, Linguine,
+                     Bucatini, Tagliatelle, Pappardelle, Cavatelli
+                    , Tortellini, Ravioli, Macaroni, Fettuccine.
+                </p>
+                <p><span>Enjoy our Burger</span><span>:</span> Beef Burger, Elk Burgers,
+                    Portobello Mushroom Burger, Turkey Burger, 	Veggie Burger, Bison Burger
+                   , Wild Salmon Burger, Black Bean Burger.
+                </p>
+                <p><span>Enjoy our Sushi</span><span>:</span> Maki, Hosomaki,
+                    Futomaki, Nigiri, Uramaki, Temaki
+                   , Chirashi, Gunkan, Inari, Sashimi.
+               </p>
+                    <a href="Food.html">food</a>
+            </div>
+        </article>
+        <article>
+            <div class="slider" onmouseover="dis()" onmouseout="dis()">
+                <input type="radio" name="radio-btn" class="radio" id="radio1" checked>
+                <input type="radio" name="radio-btn" class="radio" id="radio2">
+                <input type="radio" name="radio-btn" class="radio" id="radio3">
+                <input type="radio" name="radio-btn" class="radio" id="radio4">
+        
+                <img src="Images/1.jpg" class="slide img1" alt="">
+                <img src="Images/2.jpg" class="slide img2" alt="">
+                <img src="Images/3.jpg" class="slide img3" alt="">
+                <img src="Images/4.jpg" class="slide img4" alt="">
+        
+                <nav class="nav">
+                    <label for="radio1" onclick="select(1)"><div id="b1" class="btn" style="background-color: white;"></div></label>
+                    <label for="radio2" onclick="select(2)"><div id="b2" class="btn"></div></label>
+                    <label for="radio3" onclick="select(3)"><div id="b3" class="btn"></div></label>
+                    <label for="radio4" onclick="select(4)"><div id="b4" class="btn"></div></label>
+                </nav>
+            </div>
+        </article>
+    </section>
+
+    <section id="Delivery" class="sec s3 simg" data-z-index="1" class="parallax-window" data-parallax="scroll" data-image-src="Images/sec1.jpg">
+        <article>
+            <div class="s3cont">
+                <h1>Delivery<span>.</span></h1>
+                <p>Make an order by clicking on the button below</p>
+                <a href="Delivery.html" >Order</a>
+            </div>
+        </article>
+
+        <article id="pics">
+            <img src="Images/del1.jpg" alt="">
+            <img src="Images/del2.jpg" alt="">
+        </article>
+    </section>
+
+
+
+    <section id="Drinks" class="sec s4 shadow secphone">
+        <article class="phone">
+            <img id="drink" src="Images/drink1.jpg" alt="" onmouseover="dis1()" onmouseout="dis1()">
+        </article>
+
+        
+        <article>
+            <div class="s4cont">
+                <h1>Drinks<span>.</span></h1>
+                <p><span>Enjoy our Coffee</span><span>:</span> Black, Latte,
+                    Cappuccino, Americano, Espresso, Doppio
+                    , Cortado, Red Eye, Galão, Lungo.
+                </p>
+                <p><span>Enjoy our Juices</span><span>:</span> Cranberry, Tomato,
+                    Apple, Prune, Pomegranate, Acai berry
+                    , Orange, Grapefruit, strawberry, blackberry.
+                </p>
+                <p><span>Enjoy our Soft Drinks</span><span>:</span> Coca cola, Sprite,
+                    Pepsi, Mirinda, Fanta, Shweps
+                    , 7up, Hawai.
+                </p>
+                <p><span>Enjoy our Tea</span><span>:</span> Black Tea, Green Tea,
+                    Oolong Tea, White Tea, Puer Tea, Dark Tea
+                   , MATCHA, MATE TEA, HERBAL TEA, ROOIBOS TEAS.
+                </p>
+                <a href="Drinks.html" >Drinks</a>
+            </div>
+        </article>
+    </section>
+
+    <section id="Restaurant" class="sec s5 simg" data-z-index="1" class="parallax-window" data-parallax="scroll" data-image-src="Images/sec2.jpg"">
+        <article id="pics">
+            <img src="Images/res1.jpg" alt="">
+            <img src="Images/res2.jpg" alt="">
+        </article>
+
+        <article>
+            <div class="s5cont">
+                <h1>Restaurant<span>.</span></h1>
+                <p>See more pictures by clicking on More</p>
+                <a href="Restaurant.html" >More</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="sec s6 shadow secphone" id="Comments">
+        <article>
+            <form class="s6cont">
+                <h1>Comments.</h1>
+                <div class="txtcont">
+                    <input type="text" autocomplete="off" required>
+                    <label for="" class="lb1">
+                        <span class="lbcont">Full name</span>
+                    </label>
+                </div>
+                <div class="txtcont">
+                    <input type="text" autocomplete="off" required>
+                    <label for="" class="lb1">
+                        <span class="lbcont">Email</span>
+                    </label>
+                </div>
+                <textarea class="txtarea" placeholder="Write your comment"></textarea>
+                <div>
+                    <a href="">Send</a>
+                </div>
+            </form>
+        </article>
+
+        <article class="phone">
+            <img src="Images/com.jpg" alt="">
+        </article>
+    </section>
+
+    <section class="sec s7" id="About">
+        <article>
+            <h1>About us <span>.</span></h1>
+            <p>
+                We are a restaurant that offers food, drinks and delivery service 
+            </p>
+            <p>
+                our is a one of the best restaurants in rabat
+            </p>
+            <p>
+                this Website was created and designed and developed by <span>Ennachat Redwan</span>
+            </p>
+            <div>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-google-plus-square"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+        </article>
+
+        <article>
+            <div id="map">
+
+            </div>
+        </article>
+    </section>
+
+    <script>
+        const menuBtn=document.querySelector(".menu-btn")
+        let menuOpen=false
+        menuBtn.addEventListener('click', ()=>{
+            if(!menuOpen){
+                menuBtn.classList.add('open')
+                menuOpen=true
+            }
+            else{
+                menuBtn.classList.remove('open')
+                menuOpen=false
+            }
+        });
+        function cls(){
+            menuBtn.classList.remove('open');
+            menuOpen=false
+        }
+    </script>
+
+    <script>
+        /*function initMap(){
+            var location={lat:33.975734,lng:-6.881061};
+            var map = new google.maps.Map(document.getElementById("map"),{
+                zoom: 4,
+                center: location
+            });
+            var marker = new google.maps.marker({
+                position: location,
+                map: map
+            });
+        }*/
+
+        // Initialize and add the map
+function initMap(){
+  // The location of Uluru
+  const uluru = {lat:33.97586225741749,lng:-6.880883939269628};
+  // The map, centered at Uluru
+  const map = new google.maps.Map(
+    document.getElementById("map"),
+    {
+      zoom: 15,
+      center: uluru,
+    }
+  );
+
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0OeKVVeJ8UXd98QluhcQ93b67kXM1-fs&callback=initMap">
+        
+    </script>
+
+    <script>
+        var c=1;
+        var direction=true;
+        var hover=false;
+        setInterval(function(){
+            if(!hover)
+            {
+            document.getElementById("radio"+c).checked=true;
+            select(c)
+            if(direction){
+                c++;
+            }
+            else{
+                c--;
+            }
+            if(c>4){
+                direction=false
+                c=3
+            }
+            if(c<1){
+                direction=true
+                c=2
+            }
+        }
+        },5000);
+        function dis(){
+            hover=!hover
+        }
+        function select(id){
+            c=id
+            $(".btn").css("background-color","transparent")
+            $("#b"+id).css("background-color","white")
+        }
+    </script>
+    <script>
+            window.addEventListener('scroll',function(){
+                const header=document.querySelector('header')
+                header.classList.toggle("stiky",window.scrollY > 0)
+            });
+    </script>
+    <script>
+        var hover1=false;
+        var c2=2;
+        setInterval(function(){
+            if(!hover1){
+                var loc="Images/drink"+c2+".jpg"
+            document.getElementById("drink").src=loc
+            c2++
+            if(c2>4)
+                c2=1;
+            }
+        },8000);
+        function dis1(){
+            hover1=!hover1
+        }
+    </script>
+</body>
+</html>

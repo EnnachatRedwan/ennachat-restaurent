@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="Images/Header.png">
+
+    <link rel="stylesheet" href="Gallery.css">
+
+    <script src="jquery-3.5.1.js"></script>
+    <script src="gallery.js"></script>
+    <title>Restaurant</title>
+</head>
+<body>
+
+    <h1 id="main">Restaurant<span>.</span></h1>
+    
+    <header>
+        <div class="menu-btn">
+            <div class="menu-btn_burger">
+    
+            </div>
+        </div>
+        <nav class="nv">
+            <a href="#Kitchen" onclick="cls()">Kitchen</a>
+            <a href="#Tables" onclick="cls()">Tables</a>
+            <a href="#DrinksMakers" onclick="cls()">Drinks Makers</a>
+            <a href="#Waiters" onclick="cls()">Waiters</a>
+        </nav>
+        <a href="#main" class="backUp"><i class="fas fa-angle-double-up"></i></a>
+    </header>
+
+    <section class="resto">
+        <div class="title">
+            <h2>Kitchen</h2>
+        </div>
+        <article id="Kitchen">       
+            <div class="container">
+                <div class="plate">
+                    <img src="Images/r1.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r2.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r3.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r4.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r5.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r6.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r7.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/r8.jpg" alt="">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Tables</h2>
+        </div>
+        <article id="Tables">
+            <div class="container">
+                <div class="plate">
+                    <img src="Images/tb1.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/tb2.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/tb3.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/tb4.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/res1.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/res2.jpg" alt="">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Drinks Makers</h2>
+        </div>
+        <article id="DrinksMakers">
+            <div class="container">
+                <div class="plate">
+                    <img src="Images/dr1.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr2.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr3.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr4.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr5.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr6.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/dr7.jpg" alt="">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Waiters</h2>
+        </div>
+        <article id="Waiters">
+            <div class="container">
+                <div class="plate">
+                    <img src="Images/w1.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w2.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w3.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w4.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w5.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w6.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w7.jpg" alt="">
+                </div>
+                <div class="plate">
+                    <img src="Images/w8.jpg" alt="">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+    
+        </article>
+    </section>
+    <script>
+        $('.more').on('click',function(){
+            $(this).parent().toggleClass('SeeMore');
+            var replace=$(this).parent().hasClass('SeeMore') ? "See Less" : "See More"
+            $(this).text(replace)
+        });
+        const menuBtn=document.querySelector(".menu-btn")
+        let menuOpen=false
+        menuBtn.addEventListener('click', ()=>{
+            if(!menuOpen){
+                menuBtn.classList.add('open')
+                menuOpen=true
+            }
+            else{
+                menuBtn.classList.remove('open')
+                menuOpen=false
+            }
+        });
+        function cls(){
+            menuBtn.classList.remove('open');
+            menuOpen=false
+        }
+    </script>
+</body>
+</html>

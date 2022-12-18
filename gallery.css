@@ -1,0 +1,298 @@
+/*global*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: red;
+    color: white;
+}
+
+/*body*/
+body h1{
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    color: black;
+}
+h1 span{
+    color: red;
+    font-family: 'Righteous', cursive;
+}
+/*section*/
+section{
+    width: 100%;
+    margin-top: 20px;
+}
+/*burger menu*/
+
+.menu-btn{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: white;
+    padding: 20px;
+    transition: .25s ease-in-out;
+    z-index: 10000;
+}
+.stiky .menu-btn{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transform: translateY(-40%);
+}
+
+.menu-btn .menu-btn_burger{
+    position: absolute;
+    width: 80%;
+    height: 5px;
+    background-color: red;
+    transition: all .5s ease-in-out;
+    border-radius: 5px;
+}
+.menu-btn .menu-btn_burger::before,
+.menu-btn .menu-btn_burger::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    transition: all .5s ease-in-out;
+    border-radius: 30px;
+}
+.menu-btn .menu-btn_burger::before{
+    transform: translateY(-10px);
+}
+.menu-btn .menu-btn_burger::after{
+    transform: translateY(10px);
+}
+.menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn_burger::before{
+    transform: rotate(-45deg) translate(35px,35px);
+}
+.menu-btn.open .menu-btn_burger::after{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+.nv{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.788);
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    left: -80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: .5s;
+    z-index: 10000;
+}
+.menu-btn.open~ .nv{
+    left: 0;
+}
+.nv a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+}
+.backUp{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    pointer-events: none;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: all;
+    box-shadow: 0 0 10px black;
+    z-index: 10000;
+}
+.stiky .backUp{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.backUp .fas{
+    font-size: 30px;
+    color: red;
+}
+/*container*/
+section .container{
+    column-count: 3;
+    width: 100%;
+}
+section  article{
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+section article .more{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background:linear-gradient(to top,black,transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Righteous', cursive;
+    cursor: pointer;
+}
+.title{
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+section article.SeeMore{
+    height: auto;
+}
+.plate{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.plate img{
+    width: 100%;
+    transition: all .25s ease-in-out;
+}
+.plate:hover img{
+    transform: scale(1.1);
+    filter: blur(2px);
+}
+section.resto .container .plate:hover img{
+    transform: scale(1.1);
+    filter: none;
+}
+.plate h1{
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    font-size: 2.5em;
+    transform: translateY(-40px);
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: .25s ease-in-out;
+    pointer-events: none;
+}
+.plate h2{
+    position: absolute;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 2em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .25s ease-in-out;
+    pointer-events: none;
+}
+.plate input[type=button]{
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    border: none;
+    color: white;
+    background-color: red;
+    font-family: 'Righteous', cursive;
+    font-size: 2.5em;
+    padding: 5px 15px;
+    border-radius: 30px;
+    opacity: 0;
+    transform: scale(.5);
+    transition: .25s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+.plate .number{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    border:  none;
+    text-align: center;
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+.plate .number::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 1.5em;
+}
+.container .plate .delete{
+    display: none;
+}
+.plate input[type=button]:hover{
+    letter-spacing: 3px;
+}
+.plate:hover h1,.plate:hover h2{
+    transform: translateY(0);
+    opacity: 1;
+}
+.plate:hover input[type=button]{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%,-50%);
+}
+
+@media (max-width:858px){
+    section .container{
+        column-count: 2;
+    }
+}
+@media (max-width:500px){
+    section .container{
+        column-count: 1;
+    }
+}

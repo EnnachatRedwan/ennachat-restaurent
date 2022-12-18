@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="Delivery.css">
+    <link rel="icon" href="Images/Header.png">
+    <link rel="stylesheet" href="Gallery.css">
+    <script src="jquery-3.5.1.js"></script>
+    <title>Delivery</title>
+</head>
+<body>
+    <h1>Delivery<span>.</span></h1>
+    <input type="checkbox" name="" id="menu">
+    <aside>
+            <a href="#pizza"><img src="Images/as1.png" onclick="cls()" alt=""></a>
+            <a href="#Pasta"><img src="Images/as2.png" onclick="cls()" alt=""></a>
+            <a href="#Burger"><img src="Images/as3.png" onclick="cls()"alt=""></a>
+            <a href="#Sushi"><img src="Images/as4.png" onclick="cls()"alt=""></a>
+            <a href="#Coffee"><img src="Images/as5.png" onclick="cls()"alt=""></a>
+            <a href="#Juices"><img src="Images/as6.png" onclick="cls()"alt=""></a>
+            <a href="#SoftDrinks"><img src="Images/as7.png" onclick="cls()"alt=""></a>
+            <a href="#Tea"><img src="Images/as8.png" onclick="cls()"alt=""></a>
+            <label for="menu"><img src="Images/menu.png" alt=""></label>
+    </aside>
+
+    <section>
+        <div class="title">
+            <h2>pizza</h2>
+        </div>
+        <article id="pizza">
+            <div class="container" id="pizzacont">
+                <div class="plate">
+                    <img src="Images/p1.jpg" alt="">
+                    <h1>Cheese Pizza</h1>
+                    <h2>50DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p2.jpg" alt="">
+                    <h1>Veggie Pizza</h1>
+                    <h2>45DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p3.jpg" alt="">
+                    <h1>Pepperoni Pizza</h1>
+                    <h2>30DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p4.jpg" alt="">
+                    <h1>Meat Pizza</h1>
+                    <h2>55DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p5.jpg" alt="">
+                    <h1>Margherita Pizza</h1>
+                    <h2>25DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p6.jpg" alt="">
+                    <h1>BBQ Chicken Pizza</h1>
+                    <h2>26DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p7.jpg" alt="">
+                    <h1>Hawaiian Pizza</h1>
+                    <h2>35DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p8.jpg" alt="">
+                    <h1>Buffalo Pizza</h1>
+                    <h2>40DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p9.jpg" alt="">
+                    <h1>Supreme Pizza</h1>
+                    <h2>58DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/p10.jpg" alt="">
+                    <h1>The Works Pizza</h1>
+                    <h2>60DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pizza" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>    
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Pasta</h2>
+        </div>
+        <article id="Pasta">
+            <div class="container" id="pastacont">
+                <div class="plate">
+                    <img src="Images/pa1.jpg" alt="">
+                    <h1> Gnocchi</h1>
+                    <h2>54DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa2.jpg" alt="">
+                    <h1>Linguine</h1>
+                    <h2>53DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa3.jpg" alt="">
+                    <h1>Bucatini</h1>
+                    <h2>45DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa4.jpg" alt="">
+                    <h1>Tagliatelle</h1>
+                    <h2>65DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa5.jpg" alt="">
+                    <h1>Pappardelle</h1>
+                    <h2>30DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa6.jpg" alt="">
+                    <h1>Cavatelli</h1>
+                    <h2>36DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa7.jpg" alt="">
+                    <h1>Tortellini</h1>
+                    <h2>49DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa8.jpg" alt="">
+                    <h1>Ravioli</h1>
+                    <h2>51DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa9.jpg" alt="">
+                    <h1>Macaroni</h1>
+                    <h2>35DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/pa10.jpg" alt="">
+                    <h1>Fettuccine.</h1>
+                    <h2>29DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete pasta" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Burger</h2>
+        </div>
+        <article id="Burger">
+            <div class="container" id="burgercont">
+                <div class="plate">
+                    <img src="Images/b1.jpg" alt="">
+                    <h1>Beef Burger</h1>
+                    <h2>55DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b2.jpg" alt="">
+                    <h1>Elk Burgers</h1>
+                    <h2>43DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b3.jpg" alt="">
+                    <h1>Portobello Mushroom Burger</h1>
+                    <h2>65DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b4.jpg" alt="">
+                    <h1>Turkey Burger</h1>
+                    <h2>43DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b5.jpg" alt="">
+                    <h1>Veggie Burger</h1>
+                    <h2>37DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b6.jpg" alt="">
+                    <h1>Bison Burger</h1>
+                    <h2>40DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b7.jpg" alt="">
+                    <h1>Wild Salmon Burger</h1>
+                    <h2>44DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/b8.jpg" alt="">
+                    <h1>Black Bean Burger</h1>
+                    <h2>29DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete burger" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Sushi</h2>
+        </div>
+        <article id="Sushi">
+            <div class="container" id="sushicont">
+                <div class="plate">
+                    <img src="Images/s1.jpg" alt="">
+                    <h1> Maki</h1>
+                    <h2>89DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s2.jpg" alt="">
+                    <h1>Hosomaki</h1>
+                    <h2>70DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s3.jpg" alt="">
+                    <h1>Futomaki</h1>
+                    <h2>65DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s4.jpg" alt="">
+                    <h1>Nigiri</h1>
+                    <h2>84DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s5.jpg" alt="">
+                    <h1>Uramaki</h1>
+                    <h2>100DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s6.jpg" alt="">
+                    <h1>Temaki </h1>
+                    <h2>55DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s7.jpg" alt="">
+                    <h1>Chirashi</h1>
+                    <h2>65DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s8.jpg" alt="">
+                    <h1>Gunkan</h1>
+                    <h2>93DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s9.jpg" alt="">
+                    <h1>Inari</h1>
+                    <h2>58DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/s10.jpg" alt="">
+                    <h1>Sashimi.</h1>
+                    <h2>66DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete sushi" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+    
+        </article>
+        <div class="title">
+            <h2>Coffee</h2>
+        </div>
+        <article id="Coffee">
+            <div class="container" id="coffeecont">
+                <div class="plate">
+                    <img src="Images/c1.jpg" alt="">
+                    <h1>Black</h1>
+                    <h2>10DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c2.jpg" alt="">
+                    <h1>Latte</h1>
+                    <h2>12DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c3.jpg" alt="">
+                    <h1>Cappuccino</h1>
+                    <h2>11DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c4.jpg" alt="">
+                    <h1>Americano</h1>
+                    <h2>9DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c5.jpg" alt="">
+                    <h1>Espresso</h1>
+                    <h2>15DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c6.jpg" alt="">
+                    <h1>Doppio</h1>
+                    <h2>18DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c7.jpg" alt="">
+                    <h1>Cortado</h1>
+                    <h2>8DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c8.jpg" alt="">
+                    <h1>Red Eye</h1>
+                    <h2>20DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c9.jpg" alt="">
+                    <h1>Galão</h1>
+                    <h2>16DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/c10.jpg" alt="">
+                    <h1>Lungo</h1>
+                    <h2>10DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete coffee" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>    
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Juices</h2>
+        </div>
+        <article id="Juices">
+            <div class="container" id="juicecont">
+                <div class="plate">
+                    <img src="Images/j1.jpg" alt="">
+                    <h1>Cranberry</h1>
+                    <h2>20DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j2.jpg" alt="">
+                    <h1>Tomato</h1>
+                    <h2>19DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j3.jpg" alt="">
+                    <h1>Apple</h1>
+                    <h2>15DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j4.jpg" alt="">
+                    <h1>Prune</h1>
+                    <h2>19DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j5.jpg" alt="">
+                    <h1>Pomegranate</h1>
+                    <h2>20DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j6.jpg" alt="">
+                    <h1>Acai berry</h1>
+                    <h2>23DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j7.jpg" alt="">
+                    <h1>Orange</h1>
+                    <h2>12DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j8.jpg" alt="">
+                    <h1>Grapefruit</h1>
+                    <h2>10DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j9.jpg" alt="">
+                    <h1>strawberry</h1>
+                    <h2>13DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/j10.jpg" alt="">
+                    <h1>blackberry</h1>
+                    <h2>20DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete juice" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Soft Drinks</h2>
+        </div>
+        <article id="SoftDrinks">
+            <div class="container" id="softcont">
+                <div class="plate">
+                    <img src="Images/so1.jpg" alt="">
+                    <h1>Coca cola</h1>
+                    <h2>6DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so2.jpg" alt="">
+                    <h1>Sprite</h1>
+                    <h2>6DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so3.jpg" alt="">
+                    <h1>Pepsi</h1>
+                    <h2>5DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so4.jpg" alt="">
+                    <h1>Mirinda</h1>
+                    <h2>5DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so5.jpg" alt="">
+                    <h1>Fanta</h1>
+                    <h2>4DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so6.jpg" alt="">
+                    <h1>Shweps </h1>
+                    <h2>6DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so7.jpg" alt="">
+                    <h1>7up</h1>
+                    <h2>5DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/so8.jpg" alt="">
+                    <h1>Hawai</h1>
+                    <h2>7DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete soft" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+        </article>
+
+        <div class="title">
+            <h2>Tea</h2>
+        </div>
+        <article id="Tea">
+            <div class="container" id="teacont">
+                <div class="plate">
+                    <img src="Images/t1.jpg" alt="">
+                    <h1>Black Tea,</h1>
+                    <h2>10DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t2.jpg" alt="">
+                    <h1>Green Tea</h1>
+                    <h2>12DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t3.jpg" alt="">
+                    <h1>Oolong Tea</h1>
+                    <h2>9DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t4.jpg" alt="">
+                    <h1>White Tea</h1>
+                    <h2>15DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t5.jpg" alt="">
+                    <input type="button" class="add" value="Add">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                    <h1>Puer Tea</h1>
+                    <h2>18DH</h2>
+                </div>
+                <div class="plate">
+                    <img src="Images/t6.jpg" alt="">
+                    <h1>Dark Tea</h1>
+                    <h2>11DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t7.jpg" alt="">
+                    <h1>MATCHA TEA</h1>
+                    <h2>13DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t8.jpg" alt="">
+                    <h1>MATE TEA</h1>
+                    <h2>18DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t9.jpg" alt="">
+                    <h1>HERBAL TEA</h1>
+                    <h2>14DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+                <div class="plate">
+                    <img src="Images/t10.jpg" alt="">
+                    <h1>ROOIBOS TEAS</h1>
+                    <h2>14DH</h2>
+                    <input type="button" class="add" value="Add">
+                    <input type="button" class="delete tea" value="Delete">
+                    <input type="number" class="number" min="1" max="100" value="1">
+                </div>
+            </div>
+            <label class="more" for="c1">
+                See More
+            </label>
+    
+        </article>
+
+    </section>
+
+    <input type="checkbox" name="" id="menck">
+    <article class="drop">
+        <label class="men" for="menck">
+            <img src="Images/menu.png" alt="">
+        </label>
+        <section>
+            <article class="buy">
+                <div id="bag">
+                    
+                </div>
+            </article>
+            <article class="price">
+                <h1>Bag</h1>
+                <div class="infos">
+                    <p>Items:<br/></count:br> <span id="count">0</span></p>
+                    <p>Total price:<br/><span id="pr">0 DH</span></p>
+                </div>
+                <input type="button" class="pay" value="Pay">
+            </article>
+        </section>
+    </article>
+    <script>
+        $('.more').on('click',function(){
+            $(this).parent().toggleClass('SeeMore');
+            var replace=$(this).parent().hasClass('SeeMore') ? "See Less" : "See More"
+            $(this).text(replace)
+        });
+        function cls(){
+            document.getElementById("menu").checked=false
+            document.getElementById("menck").checked=false
+        }
+
+        function count(){
+            var c= $('#bag').children().length;
+            $('#count').html(c)
+        }
+
+        function pricing(){
+            var price=0
+            var bag=$('#bag');
+
+            for(var i =0;i<bag.children().length;i++){
+                var p=bag.children().eq(i).children().eq(2).text()
+                var q=bag.children().eq(i).children().eq(5).val()
+                price+=parseInt(p)*q
+            }
+            $('#pr').html(price+' DH')
+        }
+
+        $('.add').on('click',function(){ 
+            const plate=$(this).parent().detach()
+            $("#bag").append(plate);
+            count()
+            pricing()
+        });
+        $('.delete').on('click',function(){ 
+            var classList = $(this).attr("class").substring(7);
+            var cl=classList+'cont';
+            const plate=$(this).parent().detach()
+            $('#'+cl).append(plate);
+            count()
+            pricing()
+        });
+        $('.number').on('input',function(){
+            count()
+            pricing()
+        });
+
+    </script>
+</body>
+</html>
