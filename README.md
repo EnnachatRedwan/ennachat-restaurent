@@ -1,3 +1,3 @@
 # ennachat-restaurent
 
-demo: https://redwan-restaurant.ml
+demo: https://ennachat-restaurant.netlify.app
